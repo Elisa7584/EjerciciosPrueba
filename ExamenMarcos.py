@@ -13,7 +13,7 @@ def buscarLetra(lista,letra,num):
             letraEncontrada = lista[pos+num]
     return letraEncontrada
 
-def desordenar_lista(lista):
+def desordenarLista(lista):
     for i in range(longitud(lista)):
         j = random.randint(0, longitud(lista)-1)
         lista[i], lista[j] = lista[j], lista[i]
