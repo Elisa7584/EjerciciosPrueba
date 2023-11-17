@@ -20,12 +20,17 @@ def desordenarLista(lista):
         lista[i], lista[j] = lista[j], lista[i]
     return lista
 
-# NO TENGO NI IDEA POR AHORA :(
-def traducir(frase, lista1, lista2):
-    fraseTraducida = ""
-    for letra in frase:
-        fraseTraducida += buscarLetra(lista1,letra,(longitud(lista2) - longitud(lista1)))
-    return fraseTraducida
+def letra_en_otra_lista(lista1, lista2, letra):
+    index = lista1.index(letra)
+    return lista2[index]
+
+def traducir(lista1, lista2, frase):
+    frase_traducida = ''
+    for caracter in frase:
+        if caracter in lista1:
+            letra_traducida = letra_en_otra_lista(lista1, lista2, caracter)
+            frase_traducida += letra_traducida
+    return frase_traducida
     
 # EJERCICIO 1
 
