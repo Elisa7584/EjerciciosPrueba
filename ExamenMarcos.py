@@ -6,11 +6,12 @@ def longitud(lista):
         longitud += 1
     return longitud
 
-def buscarLetra(lista,letra,num):
+def buscarLetra(lista, letra, num):
     letraEncontrada = "no encontrada"
     for pos in range(longitud(lista)):
         if lista[pos] == letra:
-            letraEncontrada = lista[pos+num]
+            nuevo_pos = (pos + num) % longitud(lista)
+            letraEncontrada = lista[nuevo_pos]
     return letraEncontrada
 
 def desordenarLista(lista):
@@ -27,15 +28,12 @@ def traducir(frase,lista1,lista2):
     
 # EJERCICIO 1
 
-# Primero creamos la lista con las letras necesarias
 letras = "abcdefghijklmnñopqrstuvwxyz"
 listaLetras = []
 
 for l in letras:    
     listaLetras.append(l)
     
-# Pedimos datos al usuario
-
 letra = input("Introduce una letra -> ")
 num = int(input("Introduce un numero -> "))
 
@@ -44,7 +42,7 @@ print(f"Letra encontrada:{l}")
 
 # EJERCICIO 3
 
-listaDesordenada = desordenar_lista(listaLetras)
+listaDesordenada = desordenarLista(listaLetras)
 
 print(f"Lista desordenada:{listaDesordenada}")
 
