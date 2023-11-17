@@ -25,7 +25,9 @@ def traducir(frase,lista1,lista2):
     for letra in frase:
         fraseTraducida += buscarLetra(lista1,letra,(longitud(lista2) - longitud(lista1)))
     return fraseTraducida
-    
+
+# HE HECHO UN ULTIMO COMMIT AHORA MISMO, COPIA TODO DE 0, QUE HE CAMBIADO LOS METODOS
+
 # EJERCICIO 1
 
 letras = "abcdefghijklmnñopqrstuvwxyz"
