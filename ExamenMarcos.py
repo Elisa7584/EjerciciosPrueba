@@ -12,6 +12,15 @@ def buscarLetra(lista,letra,num):
         if lista[pos] == letra:
             letraEncontrada = lista[pos+num]
     return letraEncontrada
+
+def desordenar_lista(lista):
+    # Se itera sobre la lista.
+    for i in range(longitud(lista)):
+        # Se genera un índice aleatorio.
+        j = random.randint(0, longitud(lista)-1)
+        # Se intercambian los elementos de los índices i y j.
+        lista[i], lista[j] = lista[j], lista[i]
+    return lista
     
 # EJERCICIO 1
 
@@ -31,15 +40,6 @@ l = buscarLetra(listaLetras,letra,num)
 print(f"Letra encontrada:{l}")
 
 # EJERCICIO 3
-
-def desordenar_lista(lista):
-    # Se itera sobre la lista.
-    for i in range(longitud(lista)):
-        # Se genera un índice aleatorio.
-        j = random.randint(0, longitud(lista)-1)
-        # Se intercambian los elementos de los índices i y j.
-        lista[i], lista[j] = lista[j], lista[i]
-    return lista
 
 listaDesordenada = desordenar_lista(listaLetras)
 
