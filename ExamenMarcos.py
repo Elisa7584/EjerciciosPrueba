@@ -14,13 +14,16 @@ def buscarLetra(lista,letra,num):
     return letraEncontrada
 
 def desordenar_lista(lista):
-    # Se itera sobre la lista.
     for i in range(longitud(lista)):
-        # Se genera un índice aleatorio.
         j = random.randint(0, longitud(lista)-1)
-        # Se intercambian los elementos de los índices i y j.
         lista[i], lista[j] = lista[j], lista[i]
     return lista
+
+def traducir(frase,lista1,lista2):
+    fraseTraducida = ""
+    for letra in frase:
+        fraseTraducida += buscarLetra(lista1,letra,(longitud(lista2) - longitud(lista1)))
+    return fraseTraducida
     
 # EJERCICIO 1
 
@@ -43,4 +46,10 @@ print(f"Letra encontrada:{l}")
 
 listaDesordenada = desordenar_lista(listaLetras)
 
-print(listaDesordenada)
+print(f"Lista desordenada:{listaDesordenada}")
+
+# EJERCICIO 4 - No funciona por ahora xD
+
+frase = input("Introduce una frase: ")
+fraseTraducida = traducir(frase, listaLetras, listaDesordenada)
+print("La frase traducida es:", fraseTraducida)
