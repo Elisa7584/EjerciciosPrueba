@@ -20,14 +20,13 @@ def desordenarLista(lista):
         lista[i], lista[j] = lista[j], lista[i]
     return lista
 
-def traducir(frase,lista1,lista2):
+# NO TENGO NI IDEA POR AHORA :(
+def traducir(frase, lista1, lista2):
     fraseTraducida = ""
     for letra in frase:
         fraseTraducida += buscarLetra(lista1,letra,(longitud(lista2) - longitud(lista1)))
     return fraseTraducida
-
-# HE HECHO UN ULTIMO COMMIT AHORA MISMO, COPIA TODO DE 0, QUE HE CAMBIADO LOS METODOS
-
+    
 # EJERCICIO 1
 
 letras = "abcdefghijklmnñopqrstuvwxyz"
@@ -48,8 +47,9 @@ listaDesordenada = desordenarLista(listaLetras)
 
 print(f"Lista desordenada:{listaDesordenada}")
 
-# EJERCICIO 4 - No funciona por ahora xD
+# EJERCICIO 4
 
 frase = input("Introduce una frase: ")
+# NI IDEA POR AHORA
 fraseTraducida = traducir(frase, listaLetras, listaDesordenada)
 print("La frase traducida es:", fraseTraducida)
