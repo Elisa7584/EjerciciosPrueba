@@ -32,6 +32,8 @@ def cambiar_numero_por_iniciales(matriz, numero, iniciales):
 # - - - { Código principal } - - -
 
 # Prueba a ver si todo funciona, lo he hecho deprisa !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+# AMOR, CUIDADO QUE ESTABA AMAL IDENTADO Y NO SE EJECUTABA EL CODIGO PRINCIPAL
+# ATENTA, QUE LO ACABO DE CORREGIR
 
 matriz_rifa = crear_matriz()
 imprimir_matriz(matriz_rifa)
