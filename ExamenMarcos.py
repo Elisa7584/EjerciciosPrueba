@@ -28,3 +28,23 @@ def cambiar_numero_por_iniciales(matriz, numero, iniciales):
         for j in range(len(matriz[i])):
             if matriz[i][j] == numero:
                 matriz[i][j] = iniciales
+
+# - - - { Código principal } - - -
+
+    matriz_rifa = crear_matriz()
+    imprimir_matriz(matriz_rifa)
+
+    seguir = True
+
+    while seguir:
+        num_elegido = int(input("Elige un número (o escribe -1 para salir): "))
+        
+        if num_elegido == -1:
+            seguir = false
+        else
+            if not numero_disponible(matriz_rifa, num_elegido):
+                print("Número no disponible. Elige otro número.")
+            else
+                iniciales = input("Escribe tus iniciales para marcar el número: ")
+                cambiar_numero_por_iniciales(matriz_rifa, num_elegido, iniciales)
+                imprimir_matriz(matriz_rifa)
