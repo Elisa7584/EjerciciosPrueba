@@ -9,3 +9,8 @@ def crear_matriz():
             num += 1
         matriz.append(fila)
     return matriz
+
+# Función para imprimir la matriz por pantalla
+def imprimir_matriz(matriz):
+    for fila in matriz:
+        print(fila)
