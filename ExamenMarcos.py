@@ -14,3 +14,10 @@ def crear_matriz():
 def imprimir_matriz(matriz):
     for fila in matriz:
         print(fila)
+
+# Función para verificar si un número está disponible en la matriz
+def numero_disponible(matriz, numero):
+    for fila in matriz:
+        if numero in fila:
+            return True
+    return False
