@@ -21,3 +21,10 @@ def numero_disponible(matriz, numero):
         if numero in fila:
             return True
     return False
+
+# Función para cambiar el número por las iniciales indicadas
+def cambiar_numero_por_iniciales(matriz, numero, iniciales):
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            if matriz[i][j] == numero:
+                matriz[i][j] = iniciales
