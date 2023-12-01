@@ -43,10 +43,10 @@ def cambiar_numero_por_iniciales(matriz, numero, iniciales):
         
         if num_elegido == -1:
             seguir = false
-        else
+        else:
             if not numero_disponible(matriz_rifa, num_elegido):
                 print("Número no disponible. Elige otro número.")
-            else
+            else:
                 iniciales = input("Escribe tus iniciales para marcar el número: ")
                 cambiar_numero_por_iniciales(matriz_rifa, num_elegido, iniciales)
                 imprimir_matriz(matriz_rifa)
