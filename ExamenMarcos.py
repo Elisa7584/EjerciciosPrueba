@@ -31,22 +31,22 @@ def cambiar_numero_por_iniciales(matriz, numero, iniciales):
 
 # - - - { Código principal } - - -
 
-    # Prueba a ver si todo funciona, lo he hecho deprisa !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+# Prueba a ver si todo funciona, lo he hecho deprisa !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
 
-    matriz_rifa = crear_matriz()
-    imprimir_matriz(matriz_rifa)
+matriz_rifa = crear_matriz()
+imprimir_matriz(matriz_rifa)
 
-    seguir = True
+seguir = True
 
-    while seguir:
-        num_elegido = int(input("Elige un número (o escribe -1 para salir): "))
-        
-        if num_elegido == -1:
-            seguir = false
+while seguir:
+    num_elegido = int(input("Elige un número (o escribe -1 para salir): "))
+    
+    if num_elegido == -1:
+        seguir = false
+    else:
+        if not numero_disponible(matriz_rifa, num_elegido):
+            print("Número no disponible. Elige otro número.")
         else:
-            if not numero_disponible(matriz_rifa, num_elegido):
-                print("Número no disponible. Elige otro número.")
-            else:
-                iniciales = input("Escribe tus iniciales para marcar el número: ")
-                cambiar_numero_por_iniciales(matriz_rifa, num_elegido, iniciales)
-                imprimir_matriz(matriz_rifa)
+            iniciales = input("Escribe tus iniciales para marcar el número: ")
+            cambiar_numero_por_iniciales(matriz_rifa, num_elegido, iniciales)
+            imprimir_matriz(matriz_rifa)
